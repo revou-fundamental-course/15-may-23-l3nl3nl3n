@@ -1,4 +1,6 @@
-const { GoogleSpreadsheet } = require('google-spreadsheet');
+const {
+  GoogleSpreadsheet
+} = require('google-spreadsheet');
 const moment = require('moment-timezone');
 
 async function updateSheet(testCasesPassed) {
@@ -11,12 +13,10 @@ async function updateSheet(testCasesPassed) {
   const currentDate = moment().tz('Asia/Jakarta');
   // Format the date as DD-MM-YYYY
   const dateFormatted = currentDate.format('DD-MM-YYYY');
-  
   // Format the time as H:m:s
   const timeFormatted = currentDate.format('H:m:s');
-  
-  await doc.loadInfo();
 
+  await doc.loadInfo();
   const sheet = doc.sheetsByTitle['Sheet1'];
   const row = await sheet.addRow({
     Username: process.env.GITHUB_ACTOR,
@@ -26,8 +26,9 @@ async function updateSheet(testCasesPassed) {
     'Successful Test Cases': process.env.TEST_CASES_PASSED,
     'Deployment address': `https://${process.env.GITHUB_ACTOR}.github.io`,
     'Date': dateFormatted,
-    'Time': timeFormatted
+    'Time': timeFormatted,
   });
+
   console.log(`Added row ${row.rowNumber} to the sheet.`);
 }
 

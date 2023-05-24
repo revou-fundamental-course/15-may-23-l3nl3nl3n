@@ -4,7 +4,6 @@ const requiredElements = require('./testData');
 
 const url = `https://${process.env.GITHUB_ACTOR}.github.io`;
 
-
 function testElements($) {
   let testCasesPassed = 0;
   requiredElements.forEach((element) => {
@@ -12,7 +11,6 @@ function testElements($) {
       testCasesPassed++;
     }
   });
-
   process.env.TEST_CASES_PASSED = testCasesPassed;
   console.log(`${testCasesPassed}`);
 }
