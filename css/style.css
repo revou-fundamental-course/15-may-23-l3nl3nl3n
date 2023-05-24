@@ -1,0 +1,269 @@
+/* Mengatur tampilan body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(231, 230, 230);
+}
+
+/* Mengatur tampilan header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(13, 99, 179);
+    padding: 25px 25px;
+}
+
+/* Mengatur tampilan judul */
+.title {
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    margin: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Mengatur tampilan subjudul */
+.subtitle {
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightgray;
+}
+
+/* Mengatur tampilan konten utama */
+main {
+    border: 1px solid black;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Mengatur tampilan judul utama */
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Mengatur tampilan paragraf */
+p {
+    text-align: center;
+    margin: auto;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Mengatur tampilan opsi */
+.opsi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Mengatur tampilan radio button */
+input[type="radio"] {
+    display: none;
+}
+
+/* Mengatur tampilan label radio button */
+input[type="radio"]+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 45px;
+    width: 350px;
+    border-radius: 999px;
+    background-color: rgb(13, 99, 179);
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 1px;
+    font-weight: 500;
+}
+
+/* Mengatur tampilan label radio button saat dihover */
+input[type="radio"]+label:hover {
+    border: solid;
+    color: black;
+    background-color: transparent;
+}
+
+/* Mengatur tampilan kontainer kalkulator */
+#calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Mengatur tampilan kalkulator luas */
+.luas {
+    border: solid transparent;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+/* Mengatur tampilan kalkulator keliling */
+.keliling {
+    border: solid transparent;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+/* Mengatur tampilan kalkulator luas/keliling yang sedang aktif */
+.luas.clicked,
+.keliling.clicked {
+    border-color: rgb(13, 99, 179);
+}
+
+/* Mengatur tampilan judul kalkulator luas/keliling */
+.luas h2,
+.keliling h2 {
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgb(13, 99, 179);
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+/* Mengatur tampilan form kalkulator luas/keliling */
+.luas,
+.keliling {
+    display: none;
+}
+
+/* Mengatur tampilan kontainer untuk gambar dan teks */
+.figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Mengatur tampilan kotak gambar */
+.kotak {
+    border: 3px solid red;
+    height: 150px;
+    width: 150px;
+}
+
+/* Mengatur tampilan teks */
+.teks {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Mengatur tampilan baris 1 */
+.r1 {
+    text-align: left;
+    margin: 2rem;
+}
+
+/* Mengatur tampilan baris 2 */
+.r2 {
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+/* Mengatur tampilan baris 3 */
+.r3 {
+    text-align: left;
+    margin-left: 2rem;
+}
+
+/* Mengatur tampilan form luas dan keliling */
+#luasForm,
+#kelilingForm {
+    border-top: 1px solid black;
+    margin: 20px;
+    margin-top: 2rem;
+}
+
+/* Mengatur tampilan judul form */
+h3 {
+    margin: 0;
+    margin-top: 1rem;
+    font-size: 25px;
+    padding: 15px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Mengatur tampilan kontainer input */
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    margin: 1rem;
+}
+
+/* Mengatur tampilan input sisi luas dan sisi keliling */
+.sisi-luas,
+.sisi-keliling {
+    font-size: 20px;
+    width: 400px;
+    height: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Mengatur tampilan teks tersembunyi */
+.hidden {
+    text-align: left;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+/* Mengatur tampilan kontainer tombol */
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Mengatur tampilan tombol submit dan reset */
+button[type="submit"],
+button[type="reset"] {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: rgb(13, 99, 179);
+    color: white;
+    height: 40px;
+    width: 70px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* Mengatur tampilan footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Mengatur tampilan konten footer */
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Mengatur tampilan paragraf di footer */
+.footer-content p {
+    margin-bottom: 10px;
+}

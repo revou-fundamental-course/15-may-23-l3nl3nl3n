@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katik</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Judul dan subjudul -->
+        <span class="title">Katik</span> <span class="subtitle">Kalkulator Matematik</span>
+    </header>
+
+    <main>
+        <div class="home">
+            <h1>Welcome to Katik</h1>
+            <p>Hai Sobat, Selamat datang di Katik</p>
+            <p>Sebuah Web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>
+        </div>
+
+        <div class="opsi">
+            <!-- Opsi untuk memilih perhitungan luas atau keliling -->
+            <input type="radio" name="shape" value="luas-persegi" id="luas-persegi"
+                onclick="showCalculator('luas-persegi')">
+            <label for="luas-persegi">Luas Persegi</label>
+
+            <input type="radio" name="shape" value="keliling-persegi" id="keliling-persegi"
+                onclick="showCalculator('keliling-persegi')">
+            <label for="keliling-persegi">Keliling Persegi</label>
+        </div>
+
+        <div id="calculator-container">
+            <div class="luas" onclick="showCalculator('luas-persegi')">
+                <h2>Luas Persegi</h2>
+                <div class="figure">
+                    <div class="kotak"></div>
+                    <p class="teks">Bujur Sangkar</p>
+                </div>
+
+                <div class="deskripsi">
+                    <!-- Rumus dan penjelasan luas persegi -->
+                    <p class="r1">Rumus Luas Persegi yaitu :</p>
+                    <p class="r2">L = S x S</p>
+                    <p class="r3">Di mana :</p>
+                    <p class="r3">L = Luas</p>
+                    <p class="r3">S = Sisi</p>
+                </div>
+
+                <div>
+                    <form id="luasForm">
+                        <h3>Hitung Luas Persegi</h3>
+                        <div class="input-container">
+                            <!-- Input untuk mengisi nilai sisi -->
+                            <input type="text" name="sisi-luas" class="sisi-luas" pattern="[0-9]+" required>
+                        </div>
+                        <p id="rumus-luas" class="hidden"></p>
+                        <p id="perhitungan-luas" class="hidden"></p>
+                        <p id="output_luas" class="hidden"></p>
+                        <div class="button-container">
+                            <!-- Tombol untuk menghitung dan mereset -->
+                            <button type="submit" name="hitung-luas">Hitung</button>
+                            <button type="reset" name="reset-luas">Reset</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="keliling" onclick="showCalculator('keliling-persegi')">
+                <h2>Kalkulator Keliling Persegi</h2>
+                <div class="figure">
+                    <div class="kotak"></div>
+                    <p class="teks">Bujur Sangkar</p>
+                </div>
+
+                <div class="deskripsi">
+                    <!-- Rumus dan penjelasan keliling persegi -->
+                    <p class="r1">Rumus Keliling Persegi yaitu :</p>
+                    <p class="r2">K = 4 x S</p>
+                    <p class="r3">Di mana :</p>
+                    <p class="r3">K = Keliling</p>
+                    <p class="r3">S = Sisi</p>
+                </div>
+
+                <div>
+                    <form id="kelilingForm">
+                        <h3>Hitung Keliling Persegi</h3>
+                        <div class="input-container">
+                            <!-- Input untuk mengisi nilai sisi -->
+                            <input type="text" name="sisi-keliling" class="sisi-keliling" pattern="[0-9]+" required>
+                        </div>
+                        <p id="rumus-keliling" class="hidden"></p>
+                        <p id="perhitungan-keliling" class="hidden"></p>
+                        <p id="output_keliling" class="hidden"></p>
+                        <div class="button-container">
+                            <!-- Tombol untuk menghitung dan mereset -->
+                            <button type="submit" name="hitung-keliling">Hitung</button>
+                            <button type="reset" name="reset-keliling">Reset</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Hak cipta dan kontak -->
+            <p>Hak Cipta &copy; 2023 Katik</p>
+            <p>Kontak: info@katik.com | Telepon: 0822 6965 4434 (L3N) </p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
